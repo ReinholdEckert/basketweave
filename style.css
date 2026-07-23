@@ -1,0 +1,232 @@
+:root {
+  --bg: #faf7f2;
+  --card: #ffffff;
+  --ink: #24211d;
+  --muted: #6b6459;
+  --accent: #c9762b;
+  --accent-dark: #9c5a1e;
+  --line: #e8e1d4;
+  --radius: 18px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 24px 80px;
+}
+
+header.site {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 40px 0 28px;
+}
+
+header.site img {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  flex-shrink: 0;
+}
+
+header.site .brand {
+  display: flex;
+  flex-direction: column;
+}
+
+header.site .brand strong {
+  font-size: 1.15rem;
+  letter-spacing: -0.01em;
+}
+
+header.site .brand span {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+nav.pages {
+  display: flex;
+  gap: 18px;
+  margin-left: auto;
+}
+
+nav.pages a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+}
+
+nav.pages a:hover,
+nav.pages a.active {
+  color: var(--accent-dark);
+  border-bottom-color: var(--accent);
+}
+
+.hero {
+  padding: 8px 0 12px;
+}
+
+.hero h1 {
+  font-size: 2.1rem;
+  letter-spacing: -0.02em;
+  margin: 0 0 8px;
+}
+
+.hero p.lede {
+  color: var(--muted);
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.platform-badges {
+  display: flex;
+  gap: 8px;
+  margin: 18px 0 6px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 999px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 28px 30px;
+  margin: 22px 0;
+}
+
+.card h2 {
+  font-size: 1.25rem;
+  margin: 0 0 12px;
+  letter-spacing: -0.01em;
+}
+
+.card h2 .num {
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+  margin-right: 8px;
+}
+
+.card p { margin: 10px 0; }
+.card p:first-child { margin-top: 0; }
+.card p:last-child { margin-bottom: 0; }
+
+.card ul {
+  margin: 10px 0;
+  padding-left: 22px;
+}
+
+.card li { margin: 6px 0; }
+
+.faq-item {
+  border-bottom: 1px solid var(--line);
+  padding: 18px 0;
+}
+
+.faq-item:first-child { padding-top: 0; }
+.faq-item:last-child { border-bottom: none; padding-bottom: 0; }
+
+.faq-item h3 {
+  font-size: 1.02rem;
+  margin: 0 0 6px;
+}
+
+.faq-item p {
+  margin: 0;
+  color: var(--ink);
+}
+
+.contact-card {
+  background: linear-gradient(135deg, #fff 0%, #fdf6ec 100%);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 26px 30px;
+  margin: 22px 0;
+  text-align: center;
+}
+
+.contact-card a.email {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--accent-dark);
+  text-decoration: none;
+  border-bottom: 2px solid var(--accent);
+}
+
+.pill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 14px 0 0;
+}
+
+.pill-list li {
+  list-style: none;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 0.92rem;
+  flex: 1 1 220px;
+}
+
+.pill-list li strong {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--accent-dark);
+  margin-bottom: 3px;
+}
+
+footer.site {
+  margin-top: 50px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+footer.site p { margin: 4px 0; }
+
+.updated {
+  color: var(--muted);
+  font-size: 0.88rem;
+  margin-top: -4px;
+}
+
+@media (max-width: 480px) {
+  .wrap { padding: 0 18px 60px; }
+  header.site { flex-wrap: wrap; }
+  nav.pages { margin-left: 0; }
+  .hero h1 { font-size: 1.7rem; }
+  .card { padding: 22px 20px; }
+}
