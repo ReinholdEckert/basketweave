@@ -1,0 +1,76 @@
+name: Refresh Apple Music token
+
+# Creates a fresh Apple Music developer token twice a month and publishes it
+# as token.json next to the privacy and support pages. The basketweave
+# Android app downloads it, so the token can be renewed without an app update.
+#
+# Needs three repository secrets (Settings > Secrets and variables > Actions):
+#   APPLE_TEAM_ID, APPLE_KEY_ID, APPLE_PRIVATE_KEY (the whole .p8 file text)
+
+on:
+  schedule:
+    # 1st and 15th of each month, 05:23 UTC. (GitHub may start it a little late.)
+    - cron: "23 5 1,15 * *"
+  workflow_dispatch: # lets you start it by hand from the Actions tab
+
+permissions:
+  contents: write # to commit token.json
+  pages: write    # to ask GitHub Pages to publish right away
+
+concurrency:
+  group: refresh-token
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install the signing library
+        run: python -m pip install --quiet cryptography
+
+      - name: Create token.json
+        env:
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+          APPLE_KEY_ID: ${{ secrets.APPLE_KEY_ID }}
+          APPLE_PRIVATE_KEY: ${{ secrets.APPLE_PRIVATE_KEY }}
+        run: python .github/scripts/make_token.py token.json
+
+      - name: Commit and push
+        run: |
+          git config user.name "basketweave token bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add token.json
+          git commit -m "Refresh Apple Music token"
+          git push
+
+      # A push made by a workflow does not always start the Pages build on
+      # its own, so ask for it explicitly. Failure here is not fatal: the
+      # check below tells whether the new file really went live.
+      - name: Ask GitHub Pages to publish now
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "repos/${{ github.repository }}/pages/builds"
+
+      - name: Wait until the new token is online
+        run: |
+          expected=$(python -c "import json; print(json.load(open('token.json'))['generatedAt'])")
+          for attempt in $(seq 1 30); do
+            live=$(curl -fsS "https://reinholdeckert.github.io/basketweave/token.json?nocache=${attempt}-$(date +%s)" \
+              | python -c "import json,sys; print(json.load(sys.stdin).get('generatedAt',''))" 2>/dev/null || true)
+            if [ "$live" = "$expected" ]; then
+              echo "The new token is online."
+              exit 0
+            fi
+            echo "Not online yet (attempt $attempt of 30) ..."
+            sleep 10
+          done
+          echo "The new token did not appear online within 5 minutes." >&2
+          exit 1
