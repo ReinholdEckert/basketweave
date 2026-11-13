@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>basketweave — a calm Apple Music player for kids</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="basketweave is a simple Apple Music player for children on iOS and Android. Parents choose the playlists; nothing else is within reach.">
+<meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#14120f" media="(prefers-color-scheme: dark)">
+<meta property="og:title" content="basketweave — a calm Apple Music player for kids">
+<meta property="og:description" content="basketweave is a simple Apple Music player for children on iOS and Android. Parents choose the playlists; nothing else is within reach.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://reinholdeckert.github.io/basketweave/assets/icon-256.png">
+<link rel="canonical" href="https://reinholdeckert.github.io/basketweave/">
+<link rel="alternate" hreflang="en" href="https://reinholdeckert.github.io/basketweave/">
+<link rel="alternate" hreflang="de" href="https://reinholdeckert.github.io/basketweave/de/">
+<link rel="alternate" hreflang="x-default" href="https://reinholdeckert.github.io/basketweave/">
+<link rel="icon" href="assets/favicon.ico">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+<script defer src="script.js"></script>
+</head>
+<body>
+<script>
+(function(){try{
+  if(!localStorage.getItem('bw-lang') && /^de\b/i.test(navigator.language||'')){location.replace('de/');}
+}catch(e){}})();
+</script>
+<header class="nav">
+  <div class="container">
+    <a class="brand" href="./"><img src="assets/icon-256.png" alt="" width="30" height="30"><span>basketweave</span></a>
+    <button class="menu-btn" type="button" aria-label="Menu" aria-expanded="false"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg></button>
+    <nav class="nav-links" aria-label="Main">
+      <a href="guide.html">Parents’ guide</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+      <a class="lang-switch" href="de/index.html" data-lang="de" hreflang="de" lang="de" aria-label="Deutsch">DE</a>
+    </nav>
+  </div>
+</header>
+<main>
+<section class="hero">
+  <div class="container">
+    <span class="eyebrow">For iOS &amp; Android</span>
+    <h1>Music for kids. <em>On your terms.</em></h1>
+    <p class="lede">basketweave is a calm, simple Apple Music player for children. You choose the playlists — nothing else is ever within reach.</p>
+    <div class="actions"><div class="store-btns"><a class="store-btn" href="https://apps.apple.com/us/app/basketweave/id6776010613" rel="noopener"><span class="sb-small">Download on the</span><span class="sb-big">App Store</span></a><a class="store-btn" href="https://play.google.com/store/apps/details?id=com.reinholdeckert.basketweave" rel="noopener"><span class="sb-small">Get it on</span><span class="sb-big">Google Play</span></a></div></div>
+    <p class="sublinks"><a href="guide.html">Read the parents’ guide →</a><a href="support.html">Get support</a></p>
+    <div class="chips">
+      <span class="chip"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg>iOS 18.6+</span>
+      <span class="chip"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg>Android 10+</span>
+      <span class="chip"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 3.5 5.5 3.5 9S14.5 18.5 12 21c-2.5-2.5-3.5-5.5-3.5-9S9.5 5.5 12 3z"/></svg>English &amp; German</span>
+    </div>
+    <div class="hero-phones">
+      <figure class="phone "><div class="phone-body"><div class="phone-screen"><div class='mock'><div class='bar'><i></i><span>basketweave</span><i></i></div><div class='tiles'><div class='tile'></div><div class='tile'></div><div class='tile'></div><div class='tile'></div><div class='tile'></div><div class='tile'></div></div></div><img class="shot" src="assets/screens/en/playlists.png" alt="The playlist screen with album-cover tiles" loading="lazy" onerror="if(this.dataset.fb&&!this.dataset.t){this.dataset.t=1;this.src=this.dataset.fb}else{this.remove()}"></div></div></figure>
+      <figure class="phone "><div class="phone-body"><div class="phone-screen"><div class='mock'><div class='bar'><i></i><span>Playlist</span><i></i></div><div class='tiles'><div class='tile'></div><div class='tile'></div><div class='tile'></div><div class='tile'></div><div class='tile'></div><div class='tile'></div></div></div><img class="shot" src="assets/screens/en/albums.png" alt="A playlist opened as a grid of albums" loading="lazy" onerror="if(this.dataset.fb&&!this.dataset.t){this.dataset.t=1;this.src=this.dataset.fb}else{this.remove()}"></div></div></figure>
+      <figure class="phone "><div class="phone-body"><div class="phone-screen"><div class='mock'><div class='bar'><span></span><span></span></div><div class='art'></div><div class='line w60 center' style='margin-top:10px'></div><div class='line w40 center'></div><div class='slider'></div><div class='ctrls'><b></b><b class='play'></b><b></b></div></div><img class="shot" src="assets/screens/en/now.png" alt="The Now Playing screen with large artwork and simple controls" loading="lazy" onerror="if(this.dataset.fb&&!this.dataset.t){this.dataset.t=1;this.src=this.dataset.fb}else{this.remove()}"></div></div></figure>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2>Set up once. Locked for good.</h2>
+      <p>You decide what can be played — your child just taps and listens.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><h3>Connect Apple Music</h3>
+        <p>Allow basketweave to use your Apple Music library. Apple handles everything — we never see your login.</p></div>
+      <div class="step reveal"><h3>Choose the playlists</h3>
+        <p>Pick exactly which playlists appear. Until you do, nothing shows up for your child.</p></div>
+      <div class="step reveal"><h3>Lock it with a PIN</h3>
+        <p>Set a 6-digit PIN so only you can change the selection. Then hand over the device.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt" id="features">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2>Made for kids. Reassuring for parents.</h2>
+      <p>A few simple ideas, done carefully.</p>
+    </div>
+    <div class="features"><div class="feature reveal"><div class="ic"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M3.5 6l1.2 1.2L6.8 5M3.5 12l1.2 1.2L6.8 11M3.5 18l1.2 1.2L6.8 17"/></svg></div><h3>Only what you allow</h3><p>Your child sees just the playlists you’ve picked. No search, no browsing, no surprises.</p></div><div class="feature reveal"><div class="ic"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div><h3>A PIN-protected editor</h3><p>Playlist editing is locked behind a 6-digit PIN. Unlocking needs a press-and-hold, so curious fingers don’t stumble into it.</p></div><div class="feature reveal"><div class="ic"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div><h3>Albums, not endless lists</h3><p>Each playlist opens as a grid of album covers — easy for small hands to hit, even before they can read.</p></div><div class="feature reveal"><div class="ic"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M10 8.5l6 3.5-6 3.5z"/></svg></div><h3>A player for little hands</h3><p>Big artwork, play/pause, previous and next, and a simple slider.</p></div><div class="feature reveal"><div class="ic"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="14" width="4" height="6" rx="1.5"/><rect x="17" y="14" width="4" height="6" rx="1.5"/></svg></div><h3>Keeps playing</h3><p>Music continues with the screen off, with controls on the lock screen or in the notification.</p></div><div class="feature reveal"><div class="ic"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.2 8-8 9-4.8-1-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Private by design</h3><p>No ads, no analytics, no tracking, no accounts. What you set up stays on your device.</p></div></div>
+  </div>
+</section>
+
+<section class="band-dark" id="kiosk">
+  <div class="container split">
+    <div class="reveal">
+      <span class="eyebrow">Kiosk mode</span>
+      <h2>A device that’s just for music.</h2>
+      <p>Turn basketweave into a dedicated music player for your child. The lock and edit buttons disappear completely — nothing to tap, guess at, or try a PIN on.</p>
+      <ul class="checklist">
+        <li><strong>iPhone &amp; iPad:</strong> switch on Kiosk Mode in the Settings app, under basketweave.</li>
+        <li><strong>Android:</strong> basketweave notices Screen Pinning and hides the lock and edit buttons automatically.</li>
+        <li>Pair it with Guided Access (iOS) or Screen Pinning (Android) to keep your child inside the app.</li>
+      </ul>
+    </div>
+    <div class="reveal"><figure class="phone "><div class="phone-body"><div class="phone-screen"><div class='mock'><div class='bar'><i></i><span>basketweave</span><i></i></div><div class='row' style='margin-top:6%'><div class='center' style='flex:1;font-weight:600;font-size:1.25em'>Kiosk Mode</div><div class='tg'></div></div><div class='line w80' style='margin:4px 4px 0'></div><div class='line w60' style='margin:0 4px'></div></div><img class="shot" src="assets/screens/en/settings.png" alt="The Kiosk Mode switch in the iOS Settings app" loading="lazy" onerror="if(this.dataset.fb&&!this.dataset.t){this.dataset.t=1;this.src=this.dataset.fb}else{this.remove()}"></div></div></figure></div>
+  </div>
+</section>
+
+<section id="platforms">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2>Works where you do.</h2>
+      <p>Besides a device, all you need is an Apple Music subscription.</p>
+    </div>
+    <div class="platforms">
+      <div class="platform reveal">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg>
+        <h3>iOS</h3>
+        <p>For iPhone and iPad. Requires iOS 18.6 or later.</p>
+        <ul>
+          <li>Uses Apple’s MusicKit</li>
+          <li>Plays playlists you’ve downloaded in Apple Music even offline</li>
+          <li>English and German</li>
+        </ul>
+        <div class="platform-cta"><a class="store-btn" href="https://apps.apple.com/us/app/basketweave/id6776010613" rel="noopener"><span class="sb-small">Download on the</span><span class="sb-big">App Store</span></a></div>
+      </div>
+      <div class="platform reveal">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg>
+        <h3>Android</h3>
+        <p>Requires Android 10 or later.</p>
+        <ul>
+          <li>Uses Apple’s MusicKit</li>
+          <li>Streaming only — offline playback isn’t available at the moment</li>
+          <li>English and German</li>
+        </ul>
+        <div class="platform-cta"><a class="store-btn" href="https://play.google.com/store/apps/details?id=com.reinholdeckert.basketweave" rel="noopener"><span class="sb-small">Get it on</span><span class="sb-big">Google Play</span></a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt cta">
+  <div class="container reveal">
+    <h2>New to basketweave?</h2>
+    <p>The parents’ guide walks you through setup in about five minutes.</p>
+    <a class="btn btn-primary" href="guide.html">Open the guide</a>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <a class="brand" href="./"><img src="assets/icon-256.png" alt="" width="30" height="30"><span>basketweave</span></a>
+      <nav class="footer-links">
+        <a href="guide.html">Parents’ guide</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="https://apps.apple.com/us/app/basketweave/id6776010613" rel="noopener">App Store</a>
+        <a href="https://play.google.com/store/apps/details?id=com.reinholdeckert.basketweave" rel="noopener">Google Play</a>
+        <a href="mailto:basketweave.app@proton.me">basketweave.app@proton.me</a>
+      </nav>
+    </div>
+    <p>basketweave is an independent app and is not affiliated with, endorsed by, or sponsored by Apple Inc.</p>
+    <p>Apple, Apple Music, iPhone, iPad and MusicKit are trademarks of Apple Inc. Android is a trademark of Google LLC.</p>
+  </div>
+</footer>
+</body>
+</html>
