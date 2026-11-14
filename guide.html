@@ -135,13 +135,14 @@
   <h2>Kiosk mode</h2>
   <p>For a device that’s mainly your child’s music player, hide the lock and edit buttons entirely, so there’s nothing to tap or guess at.</p>
   <h3><span class="tag">iOS</span> iPhone &amp; iPad</h3>
-  <p>Open <strong>Settings → basketweave</strong> and switch on <strong>Kiosk Mode</strong>. To change playlists later, switch it off again.</p>
-  <p>To keep your child inside the app, add <strong>Guided Access</strong> (Settings → Accessibility → Guided Access), then triple-click the side button inside basketweave to start it.</p>
+  <p>basketweave detects <strong>Guided Access</strong> automatically. While it is running, the lock and edit buttons are hidden and your child can’t leave the app; end it and they come back. Turn it on under Settings → Accessibility → Guided Access, then triple-click the side button inside basketweave to start it.</p>
+  <p>Need more? Open <strong>Settings → basketweave</strong> and switch on <strong>Kiosk Mode</strong> to hide the buttons permanently, whether or not Guided Access is running. To change playlists later, switch it off again.</p>
+  <p><strong>For advanced users:</strong> if you manage your child’s iPhone or iPad with MDM (mobile device management), <strong>Single App Mode</strong> gives the best experience. It locks the device to basketweave, and basketweave hides the lock and edit buttons automatically, just like in Guided Access.</p>
   <div class="guide-shots">
     <figure class="phone "><div class="phone-body"><div class="phone-screen"><div class='mock'><div class='bar'><i></i><span>basketweave</span><i></i></div><div class='row' style='margin-top:6%'><div class='center' style='flex:1;font-weight:600;font-size:1.25em'>Kiosk Mode</div><div class='tg'></div></div><div class='line w80' style='margin:4px 4px 0'></div><div class='line w60' style='margin:0 4px'></div></div><img class="shot" src="assets/screens/en/settings.jpg" alt="The Kiosk Mode switch in the iOS Settings app" loading="lazy" onerror="if(this.dataset.fb&&!this.dataset.t){this.dataset.t=1;this.src=this.dataset.fb}else{this.remove()}"></div></div><figcaption>Kiosk Mode in Settings</figcaption></figure>
   </div>
   <h3><span class="tag">Android</span></h3>
-  <p>Use Android’s <strong>Screen Pinning</strong> (in your security settings under “App pinning”; the exact wording varies by device). While basketweave is pinned, the lock and edit buttons are hidden automatically — unpin to bring them back.</p>
+  <p>Use Android’s <strong>Screen Pinning</strong> (in your security settings under “App pinning”; the exact wording varies by device). basketweave detects it automatically: while the app is pinned, the lock and edit buttons are hidden — unpin to bring them back.</p>
 </section>
 
 <section id="works">
@@ -156,7 +157,7 @@
         <li>Background playback with lock-screen or notification controls</li>
         <li>Resuming where you left off</li>
         <li>Offline playback on iOS for playlists downloaded in the Apple Music app</li>
-        <li>PIN-locked editing, kiosk mode and Screen Pinning support</li>
+        <li>PIN-locked editing and automatic kiosk mode with Guided Access, Single App Mode and Screen Pinning</li>
         <li>iOS 18.6+ (iPhone and iPad) and Android 10+</li>
         <li>Songs that only exist in your own library (Android, too)</li>
         <li>English and German</li>
