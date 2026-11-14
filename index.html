@@ -2,15 +2,27 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>basketweave — a kid-safe Apple Music player</title>
+<title>basketweave — a calm Apple Music player for kids</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="basketweave is a simple Apple Music player for children on iOS and Android. Parents choose the playlists; nothing else is within reach.">
 <meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#14120f" media="(prefers-color-scheme: dark)">
-<meta property="og:title" content="basketweave — a kid-safe Apple Music player">
+<meta name="apple-itunes-app" content="app-id=6776010613">
+<meta property="og:site_name" content="basketweave">
+<meta property="og:title" content="basketweave — a calm Apple Music player for kids">
 <meta property="og:description" content="basketweave is a simple Apple Music player for children on iOS and Android. Parents choose the playlists; nothing else is within reach.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://reinholdeckert.github.io/basketweave/assets/icon-256.png">
+<meta property="og:url" content="https://reinholdeckert.github.io/basketweave/">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:image" content="https://reinholdeckert.github.io/basketweave/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="basketweave app icon and two app screens">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="basketweave — a calm Apple Music player for kids">
+<meta name="twitter:description" content="basketweave is a simple Apple Music player for children on iOS and Android. Parents choose the playlists; nothing else is within reach.">
+<meta name="twitter:image" content="https://reinholdeckert.github.io/basketweave/assets/og-image.jpg">
 <link rel="canonical" href="https://reinholdeckert.github.io/basketweave/">
 <link rel="alternate" hreflang="en" href="https://reinholdeckert.github.io/basketweave/">
 <link rel="alternate" hreflang="de" href="https://reinholdeckert.github.io/basketweave/de/">
@@ -19,6 +31,7 @@
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="stylesheet" href="style.css">
 <script defer src="script.js"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "MobileApplication", "name": "basketweave", "description": "basketweave is a simple Apple Music player for children on iOS and Android. Parents choose the playlists; nothing else is within reach.", "applicationCategory": "MultimediaApplication", "operatingSystem": "iOS 18.6 or later, Android 10 or later", "inLanguage": "en", "url": "https://reinholdeckert.github.io/basketweave/", "image": "https://reinholdeckert.github.io/basketweave/assets/icon-256.png", "installUrl": "https://apps.apple.com/us/app/basketweave/id6776010613", "sameAs": ["https://apps.apple.com/us/app/basketweave/id6776010613", "https://play.google.com/store/apps/details?id=com.reinholdeckert.basketweave"], "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
 </head>
 <body>
 <script>
@@ -43,7 +56,7 @@
   <div class="container">
     <span class="eyebrow">For iOS &amp; Android</span>
     <h1>Music for kids. <em>On your terms.</em></h1>
-    <p class="lede">basketweave is a kid-safe Apple Music player. You choose the playlists, and your child gets just those.</p>
+    <p class="lede">basketweave is a calm, simple Apple Music player for children. You choose the playlists — nothing else is ever within reach.</p>
     <div class="actions"><div class="store-btns"><a class="store-btn" href="https://apps.apple.com/us/app/basketweave/id6776010613" rel="noopener"><span class="sb-small">Download on the</span><span class="sb-big">App Store</span></a><a class="store-btn" href="https://play.google.com/store/apps/details?id=com.reinholdeckert.basketweave" rel="noopener"><span class="sb-small">Get it on</span><span class="sb-big">Google Play</span></a></div></div>
     <p class="sublinks"><a href="guide.html">Read the parents’ guide →</a><a href="support.html">Get support</a></p>
     <div class="chips">
@@ -91,12 +104,11 @@
     <div class="reveal">
       <span class="eyebrow">Kiosk mode</span>
       <h2>A device that’s just for music.</h2>
-      <p>Turn basketweave into a dedicated music player for your child. The app detects Guided Access and Screen Pinning automatically. The lock and edit buttons disappear completely — nothing to tap, guess at, or try a PIN on.</p>
+      <p>Turn basketweave into a dedicated music player for your child. The lock and edit buttons disappear completely — nothing to tap, guess at, or try a PIN on.</p>
       <ul class="checklist">
-        <li><strong>iPhone &amp; iPad:</strong> basketweave detects Guided Access and hides the lock and edit buttons automatically. Need more? Switch on Kiosk Mode in the Settings app, under basketweave, to hide them permanently.</li>
+        <li><strong>iPhone &amp; iPad:</strong> switch on Kiosk Mode in the Settings app, under basketweave.</li>
         <li><strong>Android:</strong> basketweave notices Screen Pinning and hides the lock and edit buttons automatically.</li>
-        <li>Both modes also keep your child inside the app. Leave them and everything is back, with your PIN unchanged.</li>
-        <li><strong>For advanced users:</strong> on iPhones and iPads managed with MDM, Single App Mode gives the best experience.</li>
+        <li>Pair it with Guided Access (iOS) or Screen Pinning (Android) to keep your child inside the app.</li>
       </ul>
     </div>
     <div class="reveal"><figure class="phone "><div class="phone-body"><div class="phone-screen"><div class='mock'><div class='bar'><i></i><span>basketweave</span><i></i></div><div class='row' style='margin-top:6%'><div class='center' style='flex:1;font-weight:600;font-size:1.25em'>Kiosk Mode</div><div class='tg'></div></div><div class='line w80' style='margin:4px 4px 0'></div><div class='line w60' style='margin:0 4px'></div></div><img class="shot" src="assets/screens/en/settings.jpg" alt="The Kiosk Mode switch in the iOS Settings app" loading="lazy" onerror="if(this.dataset.fb&&!this.dataset.t){this.dataset.t=1;this.src=this.dataset.fb}else{this.remove()}"></div></div></figure></div>
